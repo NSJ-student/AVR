@@ -1,0 +1,323 @@
+   1               		.file	"main.c"
+   2               	__SREG__ = 0x3f
+   3               	__SP_H__ = 0x3e
+   4               	__SP_L__ = 0x3d
+   5               	__CCP__  = 0x34
+   6               	__tmp_reg__ = 0
+   7               	__zero_reg__ = 1
+  15               	.Ltext0:
+  16               	.global	__vector_17
+  18               	__vector_17:
+  19               	.LFB3:
+  20               	.LM1:
+  21 0000 1F92      		push __zero_reg__
+  22 0002 0F92      		push r0
+  23 0004 0FB6      		in r0,__SREG__
+  24 0006 0F92      		push r0
+  25 0008 1124      		clr __zero_reg__
+  26 000a 8F93      		push r24
+  27 000c 9F93      		push r25
+  28               	/* prologue: Signal */
+  29               	/* frame size = 0 */
+  30               	.LM2:
+  31 000e 8091 0000 		lds r24,tdSec
+  32 0012 9091 0000 		lds r25,(tdSec)+1
+  33 0016 0196      		adiw r24,1
+  34 0018 9093 0000 		sts (tdSec)+1,r25
+  35 001c 8093 0000 		sts tdSec,r24
+  36               	.LM3:
+  37 0020 8091 0000 		lds r24,tdSec
+  38 0024 9091 0000 		lds r25,(tdSec)+1
+  39 0028 8436      		cpi r24,100
+  40 002a 9105      		cpc r25,__zero_reg__
+  41 002c 01F4      		brne .L2
+  42               	.LM4:
+  43 002e 8091 0000 		lds r24,tSec
+  44 0032 9091 0000 		lds r25,(tSec)+1
+  45 0036 0196      		adiw r24,1
+  46 0038 9093 0000 		sts (tSec)+1,r25
+  47 003c 8093 0000 		sts tSec,r24
+  48               	.LM5:
+  49 0040 1092 0000 		sts (tdSec)+1,__zero_reg__
+  50 0044 1092 0000 		sts tdSec,__zero_reg__
+  51               	.L2:
+  52               	.LM6:
+  53 0048 8091 0000 		lds r24,tdSec
+  54 004c 9091 0000 		lds r25,(tdSec)+1
+  55 0050 8F70      		andi r24,lo8(15)
+  56 0052 9070      		andi r25,hi8(15)
+  57 0054 892B      		or r24,r25
+  58 0056 01F4      		brne .L4
+  59               	.LM7:
+  60 0058 81E0      		ldi r24,lo8(1)
+  61 005a 8093 0000 		sts tFlag,r24
+  62               	.L4:
+  63               	/* epilogue start */
+  64               	.LM8:
+  65 005e 9F91      		pop r25
+  66 0060 8F91      		pop r24
+  67 0062 0F90      		pop r0
+  68 0064 0FBE      		out __SREG__,r0
+  69 0066 0F90      		pop r0
+  70 0068 1F90      		pop __zero_reg__
+  71 006a 1895      		reti
+  72               	.LFE3:
+  74               	.global	__vector_5
+  76               	__vector_5:
+  77               	.LFB4:
+  78               	.LM9:
+  79 006c 1F92      		push __zero_reg__
+  80 006e 0F92      		push r0
+  81 0070 0FB6      		in r0,__SREG__
+  82 0072 0F92      		push r0
+  83 0074 0BB6      		in r0,91-32
+  84 0076 0F92      		push r0
+  85 0078 1124      		clr __zero_reg__
+  86 007a 8F93      		push r24
+  87 007c 9F93      		push r25
+  88 007e EF93      		push r30
+  89 0080 FF93      		push r31
+  90               	/* prologue: Signal */
+  91               	/* frame size = 0 */
+  92               	.LM10:
+  93 0082 8FB7      		in r24,__SREG__
+  94 0084 8F77      		andi r24,lo8(127)
+  95 0086 8FBF      		out __SREG__,r24
+  96               	.LM11:
+  97 0088 E1E8      		ldi r30,lo8(129)
+  98 008a F0E0      		ldi r31,hi8(129)
+  99 008c 8081      		ld r24,Z
+ 100 008e 94E0      		ldi r25,lo8(4)
+ 101 0090 8927      		eor r24,r25
+ 102 0092 8083      		st Z,r24
+ 103               	.LM12:
+ 104 0094 8FB7      		in r24,__SREG__
+ 105 0096 8068      		ori r24,lo8(-128)
+ 106 0098 8FBF      		out __SREG__,r24
+ 107               	/* epilogue start */
+ 108               	.LM13:
+ 109 009a FF91      		pop r31
+ 110 009c EF91      		pop r30
+ 111 009e 9F91      		pop r25
+ 112 00a0 8F91      		pop r24
+ 113 00a2 0F90      		pop r0
+ 114 00a4 0BBE      		out 91-32,r0
+ 115 00a6 0F90      		pop r0
+ 116 00a8 0FBE      		out __SREG__,r0
+ 117 00aa 0F90      		pop r0
+ 118 00ac 1F90      		pop __zero_reg__
+ 119 00ae 1895      		reti
+ 120               	.LFE4:
+ 122               	.global	__vector_6
+ 124               	__vector_6:
+ 125               	.LFB5:
+ 126               	.LM14:
+ 127 00b0 1F92      		push __zero_reg__
+ 128 00b2 0F92      		push r0
+ 129 00b4 0FB6      		in r0,__SREG__
+ 130 00b6 0F92      		push r0
+ 131 00b8 1124      		clr __zero_reg__
+ 132 00ba 8F93      		push r24
+ 133               	/* prologue: Signal */
+ 134               	/* frame size = 0 */
+ 135               	.LM15:
+ 136 00bc 8091 8100 		lds r24,129
+ 137 00c0 82FD      		sbrc r24,2
+ 138 00c2 00C0      		rjmp .L9
+ 139               	.LM16:
+ 140 00c4 1092 0000 		sts (tdSec)+1,__zero_reg__
+ 141 00c8 1092 0000 		sts tdSec,__zero_reg__
+ 142               	.LM17:
+ 143 00cc 1092 0000 		sts (tSec)+1,__zero_reg__
+ 144 00d0 1092 0000 		sts tSec,__zero_reg__
+ 145               	.LM18:
+ 146 00d4 81E0      		ldi r24,lo8(1)
+ 147 00d6 8093 0000 		sts tFlag,r24
+ 148               	.L9:
+ 149               	/* epilogue start */
+ 150               	.LM19:
+ 151 00da 8F91      		pop r24
+ 152 00dc 0F90      		pop r0
+ 153 00de 0FBE      		out __SREG__,r0
+ 154 00e0 0F90      		pop r0
+ 155 00e2 1F90      		pop __zero_reg__
+ 156 00e4 1895      		reti
+ 157               	.LFE5:
+ 159               		.data
+ 160               	.LC0:
+ 161 0000 5469 6D65 		.string	"Time= "
+ 161      3D20 00
+ 162               		.text
+ 163               	.global	main
+ 165               	main:
+ 166               	.LFB2:
+ 167               	.LM20:
+ 168               	/* prologue: function */
+ 169               	/* frame size = 0 */
+ 170               	.LM21:
+ 171 00e6 8FB7      		in r24,__SREG__
+ 172 00e8 8F77      		andi r24,lo8(127)
+ 173 00ea 8FBF      		out __SREG__,r24
+ 174               	.LM22:
+ 175 00ec 0E94 0000 		call Lcd_Init
+ 176               	.LM23:
+ 177 00f0 1092 8000 		sts 128,__zero_reg__
+ 178               	.LM24:
+ 179 00f4 88E0      		ldi r24,lo8(8)
+ 180 00f6 8093 8100 		sts 129,r24
+ 181               	.LM25:
+ 182 00fa 1092 8200 		sts 130,__zero_reg__
+ 183               	.LM26:
+ 184 00fe 1092 8500 		sts (132)+1,__zero_reg__
+ 185 0102 1092 8400 		sts 132,__zero_reg__
+ 186               	.LM27:
+ 187 0106 82E0      		ldi r24,lo8(2)
+ 188 0108 8093 6F00 		sts 111,r24
+ 189               	.LM28:
+ 190 010c 80E7      		ldi r24,lo8(624)
+ 191 010e 92E0      		ldi r25,hi8(624)
+ 192 0110 9093 8900 		sts (136)+1,r25
+ 193 0114 8093 8800 		sts 136,r24
+ 194               	.LM29:
+ 195 0118 8AE0      		ldi r24,lo8(10)
+ 196 011a 8093 6A00 		sts 106,r24
+ 197               	.LM30:
+ 198 011e 80E3      		ldi r24,lo8(48)
+ 199 0120 8DBB      		out 61-32,r24
+ 200               	.LM31:
+ 201 0122 8FB7      		in r24,__SREG__
+ 202 0124 8168      		ori r24,lo8(-127)
+ 203 0126 8FBF      		out __SREG__,r24
+ 204               	.LM32:
+ 205 0128 80E0      		ldi r24,lo8(.LC0)
+ 206 012a 90E0      		ldi r25,hi8(.LC0)
+ 207 012c 0E94 0000 		call Lcd_Print
+ 208               	.LM33:
+ 209 0130 81E0      		ldi r24,lo8(1)
+ 210 0132 8093 0000 		sts tFlag,r24
+ 211               	.L16:
+ 212               	.LM34:
+ 213 0136 8091 0000 		lds r24,tFlag
+ 214 013a 8823      		tst r24
+ 215 013c 01F0      		breq .L16
+ 216               	.LM35:
+ 217 013e 8091 0000 		lds r24,tSec
+ 218 0142 9091 0000 		lds r25,(tSec)+1
+ 219 0146 8151      		subi r24,lo8(3601)
+ 220 0148 9E40      		sbci r25,hi8(3601)
+ 221 014a 00F0      		brlo .L12
+ 222 014c 1092 0000 		sts (tSec)+1,__zero_reg__
+ 223 0150 1092 0000 		sts tSec,__zero_reg__
+ 224               	.L12:
+ 225               	.LM36:
+ 226 0154 86E0      		ldi r24,lo8(6)
+ 227 0156 0E94 0000 		call Lcd_SetAddr
+ 228               	.LM37:
+ 229 015a 8091 0000 		lds r24,tSec
+ 230 015e 9091 0000 		lds r25,(tSec)+1
+ 231 0162 68E5      		ldi r22,lo8(600)
+ 232 0164 72E0      		ldi r23,hi8(600)
+ 233 0166 0E94 0000 		call __udivmodhi4
+ 234 016a 862F      		mov r24,r22
+ 235 016c 805D      		subi r24,lo8(-(48))
+ 236 016e 0E94 0000 		call Lcd_Data
+ 237               	.LM38:
+ 238 0172 8091 0000 		lds r24,tSec
+ 239 0176 9091 0000 		lds r25,(tSec)+1
+ 240 017a 6CE3      		ldi r22,lo8(60)
+ 241 017c 70E0      		ldi r23,hi8(60)
+ 242 017e 0E94 0000 		call __udivmodhi4
+ 243 0182 CB01      		movw r24,r22
+ 244 0184 6AE0      		ldi r22,lo8(10)
+ 245 0186 70E0      		ldi r23,hi8(10)
+ 246 0188 0E94 0000 		call __udivmodhi4
+ 247 018c 805D      		subi r24,lo8(-(48))
+ 248 018e 0E94 0000 		call Lcd_Data
+ 249               	.LM39:
+ 250 0192 8AE3      		ldi r24,lo8(58)
+ 251 0194 0E94 0000 		call Lcd_Data
+ 252               	.LM40:
+ 253 0198 8091 0000 		lds r24,tSec
+ 254 019c 9091 0000 		lds r25,(tSec)+1
+ 255 01a0 6CE3      		ldi r22,lo8(60)
+ 256 01a2 70E0      		ldi r23,hi8(60)
+ 257 01a4 0E94 0000 		call __udivmodhi4
+ 258 01a8 6AE0      		ldi r22,lo8(10)
+ 259 01aa 70E0      		ldi r23,hi8(10)
+ 260 01ac 0E94 0000 		call __udivmodhi4
+ 261 01b0 862F      		mov r24,r22
+ 262 01b2 805D      		subi r24,lo8(-(48))
+ 263 01b4 0E94 0000 		call Lcd_Data
+ 264               	.LM41:
+ 265 01b8 8091 0000 		lds r24,tSec
+ 266 01bc 9091 0000 		lds r25,(tSec)+1
+ 267 01c0 6CE3      		ldi r22,lo8(60)
+ 268 01c2 70E0      		ldi r23,hi8(60)
+ 269 01c4 0E94 0000 		call __udivmodhi4
+ 270 01c8 6AE0      		ldi r22,lo8(10)
+ 271 01ca 70E0      		ldi r23,hi8(10)
+ 272 01cc 0E94 0000 		call __udivmodhi4
+ 273 01d0 805D      		subi r24,lo8(-(48))
+ 274 01d2 0E94 0000 		call Lcd_Data
+ 275               	.LM42:
+ 276 01d6 8AE3      		ldi r24,lo8(58)
+ 277 01d8 0E94 0000 		call Lcd_Data
+ 278               	.LM43:
+ 279 01dc 8091 0000 		lds r24,tdSec
+ 280 01e0 9091 0000 		lds r25,(tdSec)+1
+ 281 01e4 6AE0      		ldi r22,lo8(10)
+ 282 01e6 70E0      		ldi r23,hi8(10)
+ 283 01e8 0E94 0000 		call __udivmodhi4
+ 284 01ec 862F      		mov r24,r22
+ 285 01ee 805D      		subi r24,lo8(-(48))
+ 286 01f0 0E94 0000 		call Lcd_Data
+ 287               	.LM44:
+ 288 01f4 8091 0000 		lds r24,tdSec
+ 289 01f8 9091 0000 		lds r25,(tdSec)+1
+ 290 01fc 6AE0      		ldi r22,lo8(10)
+ 291 01fe 70E0      		ldi r23,hi8(10)
+ 292 0200 0E94 0000 		call __udivmodhi4
+ 293 0204 805D      		subi r24,lo8(-(48))
+ 294 0206 0E94 0000 		call Lcd_Data
+ 295               	.LM45:
+ 296 020a 1092 0000 		sts tFlag,__zero_reg__
+ 297 020e 00C0      		rjmp .L16
+ 298               	.LFE2:
+ 300               	.global	tdSec
+ 301               	.global	tdSec
+ 302               		.section .bss
+ 305               	tdSec:
+ 306 0000 0000      		.skip 2,0
+ 307               	.global	tSec
+ 308               	.global	tSec
+ 311               	tSec:
+ 312 0002 0000      		.skip 2,0
+ 313               	.global	tFlag
+ 314               	.global	tFlag
+ 317               	tFlag:
+ 318 0004 00        		.skip 1,0
+ 367               	.Letext0:
+DEFINED SYMBOLS
+                            *ABS*:00000000 main.c
+C:\Users\it\AppData\Local\Temp/ccXRNAVj.s:2      *ABS*:0000003f __SREG__
+C:\Users\it\AppData\Local\Temp/ccXRNAVj.s:3      *ABS*:0000003e __SP_H__
+C:\Users\it\AppData\Local\Temp/ccXRNAVj.s:4      *ABS*:0000003d __SP_L__
+C:\Users\it\AppData\Local\Temp/ccXRNAVj.s:5      *ABS*:00000034 __CCP__
+C:\Users\it\AppData\Local\Temp/ccXRNAVj.s:6      *ABS*:00000000 __tmp_reg__
+C:\Users\it\AppData\Local\Temp/ccXRNAVj.s:7      *ABS*:00000001 __zero_reg__
+C:\Users\it\AppData\Local\Temp/ccXRNAVj.s:18     .text:00000000 __vector_17
+C:\Users\it\AppData\Local\Temp/ccXRNAVj.s:305    .bss:00000000 tdSec
+C:\Users\it\AppData\Local\Temp/ccXRNAVj.s:311    .bss:00000002 tSec
+C:\Users\it\AppData\Local\Temp/ccXRNAVj.s:317    .bss:00000004 tFlag
+C:\Users\it\AppData\Local\Temp/ccXRNAVj.s:76     .text:0000006c __vector_5
+C:\Users\it\AppData\Local\Temp/ccXRNAVj.s:124    .text:000000b0 __vector_6
+C:\Users\it\AppData\Local\Temp/ccXRNAVj.s:165    .text:000000e6 main
+
+UNDEFINED SYMBOLS
+Lcd_Init
+Lcd_Print
+Lcd_SetAddr
+__udivmodhi4
+Lcd_Data
+__do_copy_data
+__do_clear_bss

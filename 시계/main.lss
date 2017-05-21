@@ -1,0 +1,1031 @@
+
+main.elf:     file format elf32-avr
+
+Sections:
+Idx Name          Size      VMA       LMA       File off  Algn
+  0 .data         00000020  00800200  00000670  00000704  2**0
+                  CONTENTS, ALLOC, LOAD, DATA
+  1 .text         00000670  00000000  00000000  00000094  2**1
+                  CONTENTS, ALLOC, LOAD, READONLY, CODE
+  2 .bss          00000007  00800220  00800220  00000724  2**0
+                  ALLOC
+  3 .debug_aranges 00000040  00000000  00000000  00000724  2**0
+                  CONTENTS, READONLY, DEBUGGING
+  4 .debug_pubnames 0000010a  00000000  00000000  00000764  2**0
+                  CONTENTS, READONLY, DEBUGGING
+  5 .debug_info   00000313  00000000  00000000  0000086e  2**0
+                  CONTENTS, READONLY, DEBUGGING
+  6 .debug_abbrev 0000013f  00000000  00000000  00000b81  2**0
+                  CONTENTS, READONLY, DEBUGGING
+  7 .debug_line   00000469  00000000  00000000  00000cc0  2**0
+                  CONTENTS, READONLY, DEBUGGING
+  8 .debug_frame  000000f0  00000000  00000000  0000112c  2**2
+                  CONTENTS, READONLY, DEBUGGING
+  9 .debug_str    0000012c  00000000  00000000  0000121c  2**0
+                  CONTENTS, READONLY, DEBUGGING
+ 10 .debug_loc    000000dd  00000000  00000000  00001348  2**0
+                  CONTENTS, READONLY, DEBUGGING
+
+Disassembly of section .text:
+
+00000000 <__vectors>:
+   0:	0c 94 72 00 	jmp	0xe4	; 0xe4 <__ctors_end>
+   4:	0c 94 93 00 	jmp	0x126	; 0x126 <__bad_interrupt>
+   8:	0c 94 93 00 	jmp	0x126	; 0x126 <__bad_interrupt>
+   c:	0c 94 93 00 	jmp	0x126	; 0x126 <__bad_interrupt>
+  10:	0c 94 93 00 	jmp	0x126	; 0x126 <__bad_interrupt>
+  14:	0c 94 cb 00 	jmp	0x196	; 0x196 <__vector_5>
+  18:	0c 94 ed 00 	jmp	0x1da	; 0x1da <__vector_6>
+  1c:	0c 94 93 00 	jmp	0x126	; 0x126 <__bad_interrupt>
+  20:	0c 94 93 00 	jmp	0x126	; 0x126 <__bad_interrupt>
+  24:	0c 94 93 00 	jmp	0x126	; 0x126 <__bad_interrupt>
+  28:	0c 94 93 00 	jmp	0x126	; 0x126 <__bad_interrupt>
+  2c:	0c 94 93 00 	jmp	0x126	; 0x126 <__bad_interrupt>
+  30:	0c 94 93 00 	jmp	0x126	; 0x126 <__bad_interrupt>
+  34:	0c 94 93 00 	jmp	0x126	; 0x126 <__bad_interrupt>
+  38:	0c 94 93 00 	jmp	0x126	; 0x126 <__bad_interrupt>
+  3c:	0c 94 93 00 	jmp	0x126	; 0x126 <__bad_interrupt>
+  40:	0c 94 93 00 	jmp	0x126	; 0x126 <__bad_interrupt>
+  44:	0c 94 95 00 	jmp	0x12a	; 0x12a <__vector_17>
+  48:	0c 94 93 00 	jmp	0x126	; 0x126 <__bad_interrupt>
+  4c:	0c 94 93 00 	jmp	0x126	; 0x126 <__bad_interrupt>
+  50:	0c 94 93 00 	jmp	0x126	; 0x126 <__bad_interrupt>
+  54:	0c 94 93 00 	jmp	0x126	; 0x126 <__bad_interrupt>
+  58:	0c 94 93 00 	jmp	0x126	; 0x126 <__bad_interrupt>
+  5c:	0c 94 93 00 	jmp	0x126	; 0x126 <__bad_interrupt>
+  60:	0c 94 93 00 	jmp	0x126	; 0x126 <__bad_interrupt>
+  64:	0c 94 93 00 	jmp	0x126	; 0x126 <__bad_interrupt>
+  68:	0c 94 93 00 	jmp	0x126	; 0x126 <__bad_interrupt>
+  6c:	0c 94 93 00 	jmp	0x126	; 0x126 <__bad_interrupt>
+  70:	0c 94 93 00 	jmp	0x126	; 0x126 <__bad_interrupt>
+  74:	0c 94 93 00 	jmp	0x126	; 0x126 <__bad_interrupt>
+  78:	0c 94 93 00 	jmp	0x126	; 0x126 <__bad_interrupt>
+  7c:	0c 94 93 00 	jmp	0x126	; 0x126 <__bad_interrupt>
+  80:	0c 94 93 00 	jmp	0x126	; 0x126 <__bad_interrupt>
+  84:	0c 94 93 00 	jmp	0x126	; 0x126 <__bad_interrupt>
+  88:	0c 94 93 00 	jmp	0x126	; 0x126 <__bad_interrupt>
+  8c:	0c 94 93 00 	jmp	0x126	; 0x126 <__bad_interrupt>
+  90:	0c 94 93 00 	jmp	0x126	; 0x126 <__bad_interrupt>
+  94:	0c 94 93 00 	jmp	0x126	; 0x126 <__bad_interrupt>
+  98:	0c 94 93 00 	jmp	0x126	; 0x126 <__bad_interrupt>
+  9c:	0c 94 93 00 	jmp	0x126	; 0x126 <__bad_interrupt>
+  a0:	0c 94 93 00 	jmp	0x126	; 0x126 <__bad_interrupt>
+  a4:	0c 94 93 00 	jmp	0x126	; 0x126 <__bad_interrupt>
+  a8:	0c 94 93 00 	jmp	0x126	; 0x126 <__bad_interrupt>
+  ac:	0c 94 93 00 	jmp	0x126	; 0x126 <__bad_interrupt>
+  b0:	0c 94 93 00 	jmp	0x126	; 0x126 <__bad_interrupt>
+  b4:	0c 94 93 00 	jmp	0x126	; 0x126 <__bad_interrupt>
+  b8:	0c 94 93 00 	jmp	0x126	; 0x126 <__bad_interrupt>
+  bc:	0c 94 93 00 	jmp	0x126	; 0x126 <__bad_interrupt>
+  c0:	0c 94 93 00 	jmp	0x126	; 0x126 <__bad_interrupt>
+  c4:	0c 94 93 00 	jmp	0x126	; 0x126 <__bad_interrupt>
+  c8:	0c 94 93 00 	jmp	0x126	; 0x126 <__bad_interrupt>
+  cc:	0c 94 93 00 	jmp	0x126	; 0x126 <__bad_interrupt>
+  d0:	0c 94 93 00 	jmp	0x126	; 0x126 <__bad_interrupt>
+  d4:	0c 94 93 00 	jmp	0x126	; 0x126 <__bad_interrupt>
+  d8:	0c 94 93 00 	jmp	0x126	; 0x126 <__bad_interrupt>
+  dc:	0c 94 93 00 	jmp	0x126	; 0x126 <__bad_interrupt>
+  e0:	0c 94 93 00 	jmp	0x126	; 0x126 <__bad_interrupt>
+
+000000e4 <__ctors_end>:
+  e4:	11 24       	eor	r1, r1
+  e6:	1f be       	out	0x3f, r1	; 63
+  e8:	cf ef       	ldi	r28, 0xFF	; 255
+  ea:	d1 e2       	ldi	r29, 0x21	; 33
+  ec:	de bf       	out	0x3e, r29	; 62
+  ee:	cd bf       	out	0x3d, r28	; 61
+  f0:	00 e0       	ldi	r16, 0x00	; 0
+  f2:	0c bf       	out	0x3c, r16	; 60
+
+000000f4 <__do_copy_data>:
+  f4:	12 e0       	ldi	r17, 0x02	; 2
+  f6:	a0 e0       	ldi	r26, 0x00	; 0
+  f8:	b2 e0       	ldi	r27, 0x02	; 2
+  fa:	e0 e7       	ldi	r30, 0x70	; 112
+  fc:	f6 e0       	ldi	r31, 0x06	; 6
+  fe:	00 e0       	ldi	r16, 0x00	; 0
+ 100:	0b bf       	out	0x3b, r16	; 59
+ 102:	02 c0       	rjmp	.+4      	; 0x108 <__do_copy_data+0x14>
+ 104:	07 90       	elpm	r0, Z+
+ 106:	0d 92       	st	X+, r0
+ 108:	a0 32       	cpi	r26, 0x20	; 32
+ 10a:	b1 07       	cpc	r27, r17
+ 10c:	d9 f7       	brne	.-10     	; 0x104 <__do_copy_data+0x10>
+
+0000010e <__do_clear_bss>:
+ 10e:	12 e0       	ldi	r17, 0x02	; 2
+ 110:	a0 e2       	ldi	r26, 0x20	; 32
+ 112:	b2 e0       	ldi	r27, 0x02	; 2
+ 114:	01 c0       	rjmp	.+2      	; 0x118 <.do_clear_bss_start>
+
+00000116 <.do_clear_bss_loop>:
+ 116:	1d 92       	st	X+, r1
+
+00000118 <.do_clear_bss_start>:
+ 118:	a7 32       	cpi	r26, 0x27	; 39
+ 11a:	b1 07       	cpc	r27, r17
+ 11c:	e1 f7       	brne	.-8      	; 0x116 <.do_clear_bss_loop>
+ 11e:	0e 94 08 01 	call	0x210	; 0x210 <main>
+ 122:	0c 94 36 03 	jmp	0x66c	; 0x66c <_exit>
+
+00000126 <__bad_interrupt>:
+ 126:	0c 94 00 00 	jmp	0	; 0x0 <__vectors>
+
+0000012a <__vector_17>:
+
+	return 0;
+}
+
+void __vector_17(void)			// 0.01s timer
+{
+ 12a:	1f 92       	push	r1
+ 12c:	0f 92       	push	r0
+ 12e:	0f b6       	in	r0, 0x3f	; 63
+ 130:	0f 92       	push	r0
+ 132:	11 24       	eor	r1, r1
+ 134:	8f 93       	push	r24
+ 136:	9f 93       	push	r25
+	tdSec++;
+ 138:	80 91 20 02 	lds	r24, 0x0220
+ 13c:	90 91 21 02 	lds	r25, 0x0221
+ 140:	01 96       	adiw	r24, 0x01	; 1
+ 142:	90 93 21 02 	sts	0x0221, r25
+ 146:	80 93 20 02 	sts	0x0220, r24
+	
+	if(tdSec == 100)
+ 14a:	80 91 20 02 	lds	r24, 0x0220
+ 14e:	90 91 21 02 	lds	r25, 0x0221
+ 152:	84 36       	cpi	r24, 0x64	; 100
+ 154:	91 05       	cpc	r25, r1
+ 156:	69 f4       	brne	.+26     	; 0x172 <__vector_17+0x48>
+	{
+		tSec++;
+ 158:	80 91 22 02 	lds	r24, 0x0222
+ 15c:	90 91 23 02 	lds	r25, 0x0223
+ 160:	01 96       	adiw	r24, 0x01	; 1
+ 162:	90 93 23 02 	sts	0x0223, r25
+ 166:	80 93 22 02 	sts	0x0222, r24
+		tdSec = 0;
+ 16a:	10 92 21 02 	sts	0x0221, r1
+ 16e:	10 92 20 02 	sts	0x0220, r1
+	}
+	
+	if((tdSec%16) == 0)
+ 172:	80 91 20 02 	lds	r24, 0x0220
+ 176:	90 91 21 02 	lds	r25, 0x0221
+ 17a:	8f 70       	andi	r24, 0x0F	; 15
+ 17c:	90 70       	andi	r25, 0x00	; 0
+ 17e:	89 2b       	or	r24, r25
+ 180:	19 f4       	brne	.+6      	; 0x188 <__vector_17+0x5e>
+		tFlag = 1;			// LCD display
+ 182:	81 e0       	ldi	r24, 0x01	; 1
+ 184:	80 93 24 02 	sts	0x0224, r24
+}
+ 188:	9f 91       	pop	r25
+ 18a:	8f 91       	pop	r24
+ 18c:	0f 90       	pop	r0
+ 18e:	0f be       	out	0x3f, r0	; 63
+ 190:	0f 90       	pop	r0
+ 192:	1f 90       	pop	r1
+ 194:	18 95       	reti
+
+00000196 <__vector_5>:
+
+void __vector_5(void)			// INT4: Timer on/off
+{
+ 196:	1f 92       	push	r1
+ 198:	0f 92       	push	r0
+ 19a:	0f b6       	in	r0, 0x3f	; 63
+ 19c:	0f 92       	push	r0
+ 19e:	0b b6       	in	r0, 0x3b	; 59
+ 1a0:	0f 92       	push	r0
+ 1a2:	11 24       	eor	r1, r1
+ 1a4:	8f 93       	push	r24
+ 1a6:	9f 93       	push	r25
+ 1a8:	ef 93       	push	r30
+ 1aa:	ff 93       	push	r31
+	// Timer Interrupt 제어
+	
+	SREG &= 0x7F;
+ 1ac:	8f b7       	in	r24, 0x3f	; 63
+ 1ae:	8f 77       	andi	r24, 0x7F	; 127
+ 1b0:	8f bf       	out	0x3f, r24	; 63
+	
+//	TIMSK1 ^= 0b00000010;	
+	TCCR1B ^= 0b00000100;
+ 1b2:	e1 e8       	ldi	r30, 0x81	; 129
+ 1b4:	f0 e0       	ldi	r31, 0x00	; 0
+ 1b6:	80 81       	ld	r24, Z
+ 1b8:	94 e0       	ldi	r25, 0x04	; 4
+ 1ba:	89 27       	eor	r24, r25
+ 1bc:	80 83       	st	Z, r24
+
+	SREG |= 0x80;
+ 1be:	8f b7       	in	r24, 0x3f	; 63
+ 1c0:	80 68       	ori	r24, 0x80	; 128
+ 1c2:	8f bf       	out	0x3f, r24	; 63
+}
+ 1c4:	ff 91       	pop	r31
+ 1c6:	ef 91       	pop	r30
+ 1c8:	9f 91       	pop	r25
+ 1ca:	8f 91       	pop	r24
+ 1cc:	0f 90       	pop	r0
+ 1ce:	0b be       	out	0x3b, r0	; 59
+ 1d0:	0f 90       	pop	r0
+ 1d2:	0f be       	out	0x3f, r0	; 63
+ 1d4:	0f 90       	pop	r0
+ 1d6:	1f 90       	pop	r1
+ 1d8:	18 95       	reti
+
+000001da <__vector_6>:
+void __vector_6(void)			// INT5: Timer reset
+{
+ 1da:	1f 92       	push	r1
+ 1dc:	0f 92       	push	r0
+ 1de:	0f b6       	in	r0, 0x3f	; 63
+ 1e0:	0f 92       	push	r0
+ 1e2:	11 24       	eor	r1, r1
+ 1e4:	8f 93       	push	r24
+	// Timer 초기화
+//	if( !(TIMSK1 & 0x02))			// 타이머가 동작안하는 상태에서
+	if( !(TCCR1B& 0x04))
+ 1e6:	80 91 81 00 	lds	r24, 0x0081
+ 1ea:	82 fd       	sbrc	r24, 2
+ 1ec:	0b c0       	rjmp	.+22     	; 0x204 <__vector_6+0x2a>
+	{
+		tdSec = 0;				// 초기화
+ 1ee:	10 92 21 02 	sts	0x0221, r1
+ 1f2:	10 92 20 02 	sts	0x0220, r1
+		tSec = 0;
+ 1f6:	10 92 23 02 	sts	0x0223, r1
+ 1fa:	10 92 22 02 	sts	0x0222, r1
+		tFlag = 1;
+ 1fe:	81 e0       	ldi	r24, 0x01	; 1
+ 200:	80 93 24 02 	sts	0x0224, r24
+	}
+}
+ 204:	8f 91       	pop	r24
+ 206:	0f 90       	pop	r0
+ 208:	0f be       	out	0x3f, r0	; 63
+ 20a:	0f 90       	pop	r0
+ 20c:	1f 90       	pop	r1
+ 20e:	18 95       	reti
+
+00000210 <main>:
+volatile unsigned char tFlag = 0;
+
+int main(void)
+{
+
+	SREG &= 0x7F;				// global interrupt disable(register setting 도중 오동작 방지)
+ 210:	8f b7       	in	r24, 0x3f	; 63
+ 212:	8f 77       	andi	r24, 0x7F	; 127
+ 214:	8f bf       	out	0x3f, r24	; 63
+
+	Lcd_Init();
+ 216:	0e 94 da 01 	call	0x3b4	; 0x3b4 <Lcd_Init>
+	
+	TCCR1A = 0x00;	// CTC mode
+ 21a:	10 92 80 00 	sts	0x0080, r1
+	TCCR1B = 0x08;	// CTC mode, 256 분주
+ 21e:	88 e0       	ldi	r24, 0x08	; 8
+ 220:	80 93 81 00 	sts	0x0081, r24
+	TCCR1C = 0x00;	// 비교출력 차단
+ 224:	10 92 82 00 	sts	0x0082, r1
+	TCNT1 = 0x0000;	// 카운터 초기화
+ 228:	10 92 85 00 	sts	0x0085, r1
+ 22c:	10 92 84 00 	sts	0x0084, r1
+//	OCR1AH = 0x02;	// 0.01 sec 간격 타이머
+//	OCR1AL = 0x70;	
+	TIMSK1 = 0x02;	// timer interrupt disable
+ 230:	82 e0       	ldi	r24, 0x02	; 2
+ 232:	80 93 6f 00 	sts	0x006F, r24
+	OCR1A = 624;
+ 236:	80 e7       	ldi	r24, 0x70	; 112
+ 238:	92 e0       	ldi	r25, 0x02	; 2
+ 23a:	90 93 89 00 	sts	0x0089, r25
+ 23e:	80 93 88 00 	sts	0x0088, r24
+
+	EICRB = 0x0A;		// falling edge interrupt
+ 242:	8a e0       	ldi	r24, 0x0A	; 10
+ 244:	80 93 6a 00 	sts	0x006A, r24
+	EIMSK = 0x30;	// INT4, INT5 enable
+ 248:	80 e3       	ldi	r24, 0x30	; 48
+ 24a:	8d bb       	out	0x1d, r24	; 29
+
+	SREG |= 0x81;				// global interrupt enable
+ 24c:	8f b7       	in	r24, 0x3f	; 63
+ 24e:	81 68       	ori	r24, 0x81	; 129
+ 250:	8f bf       	out	0x3f, r24	; 63
+
+	Lcd_Print("Time= ");
+ 252:	80 e0       	ldi	r24, 0x00	; 0
+ 254:	92 e0       	ldi	r25, 0x02	; 2
+ 256:	0e 94 7e 02 	call	0x4fc	; 0x4fc <Lcd_Print>
+	tFlag = 1;
+ 25a:	81 e0       	ldi	r24, 0x01	; 1
+ 25c:	80 93 24 02 	sts	0x0224, r24
+	
+	while(1)
+	{
+		if(tFlag)		// 타이머 인터럽트가 발생하여 tSec가 갱신되면
+ 260:	80 91 24 02 	lds	r24, 0x0224
+ 264:	88 23       	and	r24, r24
+ 266:	e1 f3       	breq	.-8      	; 0x260 <main+0x50>
+		{
+			if(tSec > 3600) tSec = 0;		// 1시간 이상 카운터면 리셋
+ 268:	80 91 22 02 	lds	r24, 0x0222
+ 26c:	90 91 23 02 	lds	r25, 0x0223
+ 270:	81 51       	subi	r24, 0x11	; 17
+ 272:	9e 40       	sbci	r25, 0x0E	; 14
+ 274:	20 f0       	brcs	.+8      	; 0x27e <main+0x6e>
+ 276:	10 92 23 02 	sts	0x0223, r1
+ 27a:	10 92 22 02 	sts	0x0222, r1
+
+			// 카운터 시간를lcd에 표시
+			Lcd_SetAddr(6);
+ 27e:	86 e0       	ldi	r24, 0x06	; 6
+ 280:	0e 94 0d 02 	call	0x41a	; 0x41a <Lcd_SetAddr>
+			Lcd_Data(((tSec/60)/10)+'0');
+ 284:	80 91 22 02 	lds	r24, 0x0222
+ 288:	90 91 23 02 	lds	r25, 0x0223
+ 28c:	68 e5       	ldi	r22, 0x58	; 88
+ 28e:	72 e0       	ldi	r23, 0x02	; 2
+ 290:	0e 94 22 03 	call	0x644	; 0x644 <__udivmodhi4>
+ 294:	86 2f       	mov	r24, r22
+ 296:	80 5d       	subi	r24, 0xD0	; 208
+ 298:	0e 94 1e 02 	call	0x43c	; 0x43c <Lcd_Data>
+			Lcd_Data(((tSec/60)%10)+'0');
+ 29c:	80 91 22 02 	lds	r24, 0x0222
+ 2a0:	90 91 23 02 	lds	r25, 0x0223
+ 2a4:	6c e3       	ldi	r22, 0x3C	; 60
+ 2a6:	70 e0       	ldi	r23, 0x00	; 0
+ 2a8:	0e 94 22 03 	call	0x644	; 0x644 <__udivmodhi4>
+ 2ac:	cb 01       	movw	r24, r22
+ 2ae:	6a e0       	ldi	r22, 0x0A	; 10
+ 2b0:	70 e0       	ldi	r23, 0x00	; 0
+ 2b2:	0e 94 22 03 	call	0x644	; 0x644 <__udivmodhi4>
+ 2b6:	80 5d       	subi	r24, 0xD0	; 208
+ 2b8:	0e 94 1e 02 	call	0x43c	; 0x43c <Lcd_Data>
+			Lcd_Data(':');
+ 2bc:	8a e3       	ldi	r24, 0x3A	; 58
+ 2be:	0e 94 1e 02 	call	0x43c	; 0x43c <Lcd_Data>
+			Lcd_Data(((tSec%60)/10)+'0');
+ 2c2:	80 91 22 02 	lds	r24, 0x0222
+ 2c6:	90 91 23 02 	lds	r25, 0x0223
+ 2ca:	6c e3       	ldi	r22, 0x3C	; 60
+ 2cc:	70 e0       	ldi	r23, 0x00	; 0
+ 2ce:	0e 94 22 03 	call	0x644	; 0x644 <__udivmodhi4>
+ 2d2:	6a e0       	ldi	r22, 0x0A	; 10
+ 2d4:	70 e0       	ldi	r23, 0x00	; 0
+ 2d6:	0e 94 22 03 	call	0x644	; 0x644 <__udivmodhi4>
+ 2da:	86 2f       	mov	r24, r22
+ 2dc:	80 5d       	subi	r24, 0xD0	; 208
+ 2de:	0e 94 1e 02 	call	0x43c	; 0x43c <Lcd_Data>
+			Lcd_Data(((tSec%60)%10)+'0');
+ 2e2:	80 91 22 02 	lds	r24, 0x0222
+ 2e6:	90 91 23 02 	lds	r25, 0x0223
+ 2ea:	6c e3       	ldi	r22, 0x3C	; 60
+ 2ec:	70 e0       	ldi	r23, 0x00	; 0
+ 2ee:	0e 94 22 03 	call	0x644	; 0x644 <__udivmodhi4>
+ 2f2:	6a e0       	ldi	r22, 0x0A	; 10
+ 2f4:	70 e0       	ldi	r23, 0x00	; 0
+ 2f6:	0e 94 22 03 	call	0x644	; 0x644 <__udivmodhi4>
+ 2fa:	80 5d       	subi	r24, 0xD0	; 208
+ 2fc:	0e 94 1e 02 	call	0x43c	; 0x43c <Lcd_Data>
+			Lcd_Data(':');
+ 300:	8a e3       	ldi	r24, 0x3A	; 58
+ 302:	0e 94 1e 02 	call	0x43c	; 0x43c <Lcd_Data>
+			Lcd_Data(tdSec/10+'0');
+ 306:	80 91 20 02 	lds	r24, 0x0220
+ 30a:	90 91 21 02 	lds	r25, 0x0221
+ 30e:	6a e0       	ldi	r22, 0x0A	; 10
+ 310:	70 e0       	ldi	r23, 0x00	; 0
+ 312:	0e 94 22 03 	call	0x644	; 0x644 <__udivmodhi4>
+ 316:	86 2f       	mov	r24, r22
+ 318:	80 5d       	subi	r24, 0xD0	; 208
+ 31a:	0e 94 1e 02 	call	0x43c	; 0x43c <Lcd_Data>
+			Lcd_Data(tdSec%10+'0');
+ 31e:	80 91 20 02 	lds	r24, 0x0220
+ 322:	90 91 21 02 	lds	r25, 0x0221
+ 326:	6a e0       	ldi	r22, 0x0A	; 10
+ 328:	70 e0       	ldi	r23, 0x00	; 0
+ 32a:	0e 94 22 03 	call	0x644	; 0x644 <__udivmodhi4>
+ 32e:	80 5d       	subi	r24, 0xD0	; 208
+ 330:	0e 94 1e 02 	call	0x43c	; 0x43c <Lcd_Data>
+
+			tFlag = 0;
+ 334:	10 92 24 02 	sts	0x0224, r1
+ 338:	93 cf       	rjmp	.-218    	; 0x260 <main+0x50>
+
+0000033a <Lcd_Avr_Pin_Init>:
+
+static unsigned int uiCharCnt;
+
+void Lcd_Avr_Pin_Init(void)
+{
+	LCD_BUS_DDR = 0xFF;		// 모두 출력모드로
+ 33a:	8f ef       	ldi	r24, 0xFF	; 255
+ 33c:	87 b9       	out	0x07, r24	; 7
+	LCD_CTL_DDR |= (1<<LCD_PIN_RS)|(1<<LCD_PIN_RW)|(1<<LCD_PIN_EN);	// LCD의 제어핀들을 출력모드로 (0x07과 같다)
+ 33e:	83 b3       	in	r24, 0x13	; 19
+ 340:	87 60       	ori	r24, 0x07	; 7
+ 342:	83 bb       	out	0x13, r24	; 19
+
+	return;
+}
+ 344:	08 95       	ret
+
+00000346 <Lcd_Inst>:
+
+void Lcd_Inst(unsigned char ucInst)	// LCD에 명령을 전달, lcd.c에서만 호출가능
+{
+ 346:	df 93       	push	r29
+ 348:	cf 93       	push	r28
+ 34a:	0f 92       	push	r0
+ 34c:	0f 92       	push	r0
+ 34e:	cd b7       	in	r28, 0x3d	; 61
+ 350:	de b7       	in	r29, 0x3e	; 62
+	volatile unsigned int uiCnt;
+
+	LCD_BUS = ucInst;
+ 352:	88 b9       	out	0x08, r24	; 8
+
+	LCD_CTL = (0<<LCD_PIN_RS)|(0<<LCD_PIN_RW)|(0<<LCD_PIN_EN);		// datasheet timing diagram의 맨 앞
+ 354:	14 ba       	out	0x14, r1	; 20
+	DELAY(DNUM1);
+ 356:	1a 82       	std	Y+2, r1	; 0x02
+ 358:	19 82       	std	Y+1, r1	; 0x01
+ 35a:	05 c0       	rjmp	.+10     	; 0x366 <Lcd_Inst+0x20>
+ 35c:	89 81       	ldd	r24, Y+1	; 0x01
+ 35e:	9a 81       	ldd	r25, Y+2	; 0x02
+ 360:	01 96       	adiw	r24, 0x01	; 1
+ 362:	9a 83       	std	Y+2, r25	; 0x02
+ 364:	89 83       	std	Y+1, r24	; 0x01
+ 366:	89 81       	ldd	r24, Y+1	; 0x01
+ 368:	9a 81       	ldd	r25, Y+2	; 0x02
+ 36a:	88 37       	cpi	r24, 0x78	; 120
+ 36c:	91 05       	cpc	r25, r1
+ 36e:	b0 f3       	brcs	.-20     	; 0x35c <Lcd_Inst+0x16>
+	
+	LCD_CTL = (0<<LCD_PIN_RS)|(0<<LCD_PIN_RW)|(1<<LCD_PIN_EN);		// EN 활설화
+ 370:	84 e0       	ldi	r24, 0x04	; 4
+ 372:	84 bb       	out	0x14, r24	; 20
+	DELAY(DNUM2);													// (최소 150ns 필요)LCD가 제대로 동작하기위한 지연시간	
+ 374:	1a 82       	std	Y+2, r1	; 0x02
+ 376:	19 82       	std	Y+1, r1	; 0x01
+ 378:	05 c0       	rjmp	.+10     	; 0x384 <Lcd_Inst+0x3e>
+ 37a:	89 81       	ldd	r24, Y+1	; 0x01
+ 37c:	9a 81       	ldd	r25, Y+2	; 0x02
+ 37e:	01 96       	adiw	r24, 0x01	; 1
+ 380:	9a 83       	std	Y+2, r25	; 0x02
+ 382:	89 83       	std	Y+1, r24	; 0x01
+ 384:	89 81       	ldd	r24, Y+1	; 0x01
+ 386:	9a 81       	ldd	r25, Y+2	; 0x02
+ 388:	80 5e       	subi	r24, 0xE0	; 224
+ 38a:	91 40       	sbci	r25, 0x01	; 1
+ 38c:	b0 f3       	brcs	.-20     	; 0x37a <Lcd_Inst+0x34>
+
+	LCD_CTL = (0<<LCD_PIN_RS)|(0<<LCD_PIN_RW)|(0<<LCD_PIN_EN);		// datasheet timing diagram의 맨 앞
+ 38e:	14 ba       	out	0x14, r1	; 20
+	DELAY(DNUM3);													// (최소 40ns 필요)LCD가 제대로 동작하기위한 지연시간
+ 390:	1a 82       	std	Y+2, r1	; 0x02
+ 392:	19 82       	std	Y+1, r1	; 0x01
+ 394:	05 c0       	rjmp	.+10     	; 0x3a0 <Lcd_Inst+0x5a>
+ 396:	89 81       	ldd	r24, Y+1	; 0x01
+ 398:	9a 81       	ldd	r25, Y+2	; 0x02
+ 39a:	01 96       	adiw	r24, 0x01	; 1
+ 39c:	9a 83       	std	Y+2, r25	; 0x02
+ 39e:	89 83       	std	Y+1, r24	; 0x01
+ 3a0:	89 81       	ldd	r24, Y+1	; 0x01
+ 3a2:	9a 81       	ldd	r25, Y+2	; 0x02
+ 3a4:	88 37       	cpi	r24, 0x78	; 120
+ 3a6:	91 05       	cpc	r25, r1
+ 3a8:	b0 f3       	brcs	.-20     	; 0x396 <Lcd_Inst+0x50>
+
+	return;
+}
+ 3aa:	0f 90       	pop	r0
+ 3ac:	0f 90       	pop	r0
+ 3ae:	cf 91       	pop	r28
+ 3b0:	df 91       	pop	r29
+ 3b2:	08 95       	ret
+
+000003b4 <Lcd_Init>:
+
+	return;
+}
+
+void Lcd_Init(void)
+{
+ 3b4:	df 93       	push	r29
+ 3b6:	cf 93       	push	r28
+ 3b8:	0f 92       	push	r0
+ 3ba:	0f 92       	push	r0
+ 3bc:	cd b7       	in	r28, 0x3d	; 61
+ 3be:	de b7       	in	r29, 0x3e	; 62
+
+static unsigned int uiCharCnt;
+
+void Lcd_Avr_Pin_Init(void)
+{
+	LCD_BUS_DDR = 0xFF;		// 모두 출력모드로
+ 3c0:	8f ef       	ldi	r24, 0xFF	; 255
+ 3c2:	87 b9       	out	0x07, r24	; 7
+	LCD_CTL_DDR |= (1<<LCD_PIN_RS)|(1<<LCD_PIN_RW)|(1<<LCD_PIN_EN);	// LCD의 제어핀들을 출력모드로 (0x07과 같다)
+ 3c4:	83 b3       	in	r24, 0x13	; 19
+ 3c6:	87 60       	ori	r24, 0x07	; 7
+ 3c8:	83 bb       	out	0x13, r24	; 19
+{
+	volatile unsigned int uiCnt;
+
+	Lcd_Avr_Pin_Init();			// AVR pin 초기화
+
+	DELAY(65000);				// LCD booting을 기다린다
+ 3ca:	1a 82       	std	Y+2, r1	; 0x02
+ 3cc:	19 82       	std	Y+1, r1	; 0x01
+ 3ce:	05 c0       	rjmp	.+10     	; 0x3da <Lcd_Init+0x26>
+ 3d0:	89 81       	ldd	r24, Y+1	; 0x01
+ 3d2:	9a 81       	ldd	r25, Y+2	; 0x02
+ 3d4:	01 96       	adiw	r24, 0x01	; 1
+ 3d6:	9a 83       	std	Y+2, r25	; 0x02
+ 3d8:	89 83       	std	Y+1, r24	; 0x01
+ 3da:	89 81       	ldd	r24, Y+1	; 0x01
+ 3dc:	9a 81       	ldd	r25, Y+2	; 0x02
+ 3de:	88 5e       	subi	r24, 0xE8	; 232
+ 3e0:	9d 4f       	sbci	r25, 0xFD	; 253
+ 3e2:	b0 f3       	brcs	.-20     	; 0x3d0 <Lcd_Init+0x1c>
+
+	Lcd_Inst(LCD_INST_FUNC);	// LCD 기능들 초기화
+ 3e4:	88 e3       	ldi	r24, 0x38	; 56
+ 3e6:	0e 94 a3 01 	call	0x346	; 0x346 <Lcd_Inst>
+	Lcd_Inst(LCD_INST_DSP);
+ 3ea:	8f e0       	ldi	r24, 0x0F	; 15
+ 3ec:	0e 94 a3 01 	call	0x346	; 0x346 <Lcd_Inst>
+	Lcd_Inst(LCD_INST_ENT);
+ 3f0:	86 e0       	ldi	r24, 0x06	; 6
+ 3f2:	0e 94 a3 01 	call	0x346	; 0x346 <Lcd_Inst>
+	Lcd_Inst(LCD_INST_CUR);
+ 3f6:	84 e1       	ldi	r24, 0x14	; 20
+ 3f8:	0e 94 a3 01 	call	0x346	; 0x346 <Lcd_Inst>
+	Lcd_Inst(LCD_INST_CLR);
+ 3fc:	81 e0       	ldi	r24, 0x01	; 1
+ 3fe:	0e 94 a3 01 	call	0x346	; 0x346 <Lcd_Inst>
+	Lcd_Inst(LCD_INST_HOME);
+ 402:	82 e0       	ldi	r24, 0x02	; 2
+ 404:	0e 94 a3 01 	call	0x346	; 0x346 <Lcd_Inst>
+
+	uiCharCnt = 0;
+ 408:	10 92 26 02 	sts	0x0226, r1
+ 40c:	10 92 25 02 	sts	0x0225, r1
+
+	return;
+}
+ 410:	0f 90       	pop	r0
+ 412:	0f 90       	pop	r0
+ 414:	cf 91       	pop	r28
+ 416:	df 91       	pop	r29
+ 418:	08 95       	ret
+
+0000041a <Lcd_SetAddr>:
+}
+
+
+void Lcd_SetAddr(unsigned char ucAddr)
+{
+	if( 15 < ucAddr )				// 주소가 15보다 크면
+ 41a:	80 31       	cpi	r24, 0x10	; 16
+ 41c:	38 f0       	brcs	.+14     	; 0x42c <Lcd_SetAddr+0x12>
+	{
+		if( 40 > ucAddr )			// 주소가 40보다 작다면
+ 41e:	88 32       	cpi	r24, 0x28	; 40
+ 420:	10 f4       	brcc	.+4      	; 0x426 <Lcd_SetAddr+0xc>
+ 422:	88 e2       	ldi	r24, 0x28	; 40
+ 424:	03 c0       	rjmp	.+6      	; 0x42c <Lcd_SetAddr+0x12>
+		{
+			ucAddr = 40;			// 다음 줄의 맨 앞
+		}
+		else if( 55 < ucAddr )		// 주소가 55보다 크면
+ 426:	88 33       	cpi	r24, 0x38	; 56
+ 428:	08 f0       	brcs	.+2      	; 0x42c <Lcd_SetAddr+0x12>
+ 42a:	80 e0       	ldi	r24, 0x00	; 0
+		{
+			ucAddr = 0;			// 첫 줄의 맨 앞
+		}
+	}
+	uiCharCnt = ucAddr;
+ 42c:	80 93 25 02 	sts	0x0225, r24
+ 430:	10 92 26 02 	sts	0x0226, r1
+	
+	Lcd_Inst( 0x80 | ucAddr );	// 커서 위치를 설정한다
+ 434:	80 68       	ori	r24, 0x80	; 128
+ 436:	0e 94 a3 01 	call	0x346	; 0x346 <Lcd_Inst>
+	
+	return;
+}
+ 43a:	08 95       	ret
+
+0000043c <Lcd_Data>:
+
+	return;
+}
+
+void Lcd_Data(unsigned char ucData)	// LCD에 Data를 전달
+{
+ 43c:	1f 93       	push	r17
+ 43e:	df 93       	push	r29
+ 440:	cf 93       	push	r28
+ 442:	0f 92       	push	r0
+ 444:	0f 92       	push	r0
+ 446:	cd b7       	in	r28, 0x3d	; 61
+ 448:	de b7       	in	r29, 0x3e	; 62
+ 44a:	18 2f       	mov	r17, r24
+	volatile unsigned int uiCnt;
+
+	if( 15 < uiCharCnt )				// 주소가 15보다 크면
+ 44c:	80 91 25 02 	lds	r24, 0x0225
+ 450:	90 91 26 02 	lds	r25, 0x0226
+ 454:	80 31       	cpi	r24, 0x10	; 16
+ 456:	91 05       	cpc	r25, r1
+ 458:	a0 f0       	brcs	.+40     	; 0x482 <Lcd_Data+0x46>
+	{
+		if( 40 > uiCharCnt )			// 주소가 40보다 작다면
+ 45a:	88 32       	cpi	r24, 0x28	; 40
+ 45c:	91 05       	cpc	r25, r1
+ 45e:	40 f4       	brcc	.+16     	; 0x470 <Lcd_Data+0x34>
+		{
+			uiCharCnt = 40;			// 2 줄의 맨 앞
+ 460:	88 e2       	ldi	r24, 0x28	; 40
+ 462:	90 e0       	ldi	r25, 0x00	; 0
+ 464:	90 93 26 02 	sts	0x0226, r25
+ 468:	80 93 25 02 	sts	0x0225, r24
+
+			Lcd_SetAddr(uiCharCnt);	
+ 46c:	88 e2       	ldi	r24, 0x28	; 40
+ 46e:	07 c0       	rjmp	.+14     	; 0x47e <Lcd_Data+0x42>
+		}
+		else if( 55 < uiCharCnt )		// 주소가 55보다 크면
+ 470:	c8 97       	sbiw	r24, 0x38	; 56
+ 472:	38 f0       	brcs	.+14     	; 0x482 <Lcd_Data+0x46>
+		{
+			uiCharCnt = 0;			// 첫 줄의 맨 앞
+ 474:	10 92 26 02 	sts	0x0226, r1
+ 478:	10 92 25 02 	sts	0x0225, r1
+
+			Lcd_SetAddr(uiCharCnt);	
+ 47c:	80 e0       	ldi	r24, 0x00	; 0
+ 47e:	0e 94 0d 02 	call	0x41a	; 0x41a <Lcd_SetAddr>
+		}
+	}
+
+	++uiCharCnt;
+ 482:	80 91 25 02 	lds	r24, 0x0225
+ 486:	90 91 26 02 	lds	r25, 0x0226
+ 48a:	01 96       	adiw	r24, 0x01	; 1
+ 48c:	90 93 26 02 	sts	0x0226, r25
+ 490:	80 93 25 02 	sts	0x0225, r24
+
+	LCD_BUS = ucData;
+ 494:	18 b9       	out	0x08, r17	; 8
+
+	LCD_CTL = (1<<LCD_PIN_RS)|(0<<LCD_PIN_RW)|(0<<LCD_PIN_EN);		// datasheet timing diagram의 맨 앞
+ 496:	81 e0       	ldi	r24, 0x01	; 1
+ 498:	84 bb       	out	0x14, r24	; 20
+	DELAY(DNUM1);													// (최소 40ns 필요)LCD가 제대로 동작하기위한 지연시간
+ 49a:	1a 82       	std	Y+2, r1	; 0x02
+ 49c:	19 82       	std	Y+1, r1	; 0x01
+ 49e:	05 c0       	rjmp	.+10     	; 0x4aa <Lcd_Data+0x6e>
+ 4a0:	89 81       	ldd	r24, Y+1	; 0x01
+ 4a2:	9a 81       	ldd	r25, Y+2	; 0x02
+ 4a4:	01 96       	adiw	r24, 0x01	; 1
+ 4a6:	9a 83       	std	Y+2, r25	; 0x02
+ 4a8:	89 83       	std	Y+1, r24	; 0x01
+ 4aa:	89 81       	ldd	r24, Y+1	; 0x01
+ 4ac:	9a 81       	ldd	r25, Y+2	; 0x02
+ 4ae:	88 37       	cpi	r24, 0x78	; 120
+ 4b0:	91 05       	cpc	r25, r1
+ 4b2:	b0 f3       	brcs	.-20     	; 0x4a0 <Lcd_Data+0x64>
+
+	LCD_CTL = (1<<LCD_PIN_RS)|(0<<LCD_PIN_RW)|(1<<LCD_PIN_EN);		// EN 활설화
+ 4b4:	85 e0       	ldi	r24, 0x05	; 5
+ 4b6:	84 bb       	out	0x14, r24	; 20
+	DELAY(DNUM2);													// (최소 150ns 필요)LCD가 제대로 동작하기위한 지연시간	
+ 4b8:	1a 82       	std	Y+2, r1	; 0x02
+ 4ba:	19 82       	std	Y+1, r1	; 0x01
+ 4bc:	05 c0       	rjmp	.+10     	; 0x4c8 <Lcd_Data+0x8c>
+ 4be:	89 81       	ldd	r24, Y+1	; 0x01
+ 4c0:	9a 81       	ldd	r25, Y+2	; 0x02
+ 4c2:	01 96       	adiw	r24, 0x01	; 1
+ 4c4:	9a 83       	std	Y+2, r25	; 0x02
+ 4c6:	89 83       	std	Y+1, r24	; 0x01
+ 4c8:	89 81       	ldd	r24, Y+1	; 0x01
+ 4ca:	9a 81       	ldd	r25, Y+2	; 0x02
+ 4cc:	80 5e       	subi	r24, 0xE0	; 224
+ 4ce:	91 40       	sbci	r25, 0x01	; 1
+ 4d0:	b0 f3       	brcs	.-20     	; 0x4be <Lcd_Data+0x82>
+
+	LCD_CTL = (1<<LCD_PIN_RS)|(0<<LCD_PIN_RW)|(0<<LCD_PIN_EN);		// datasheet timing diagram의 맨 앞
+ 4d2:	81 e0       	ldi	r24, 0x01	; 1
+ 4d4:	84 bb       	out	0x14, r24	; 20
+	DELAY(DNUM3);													// (최소 40ns 필요)LCD가 제대로 동작하기위한 지연시간
+ 4d6:	1a 82       	std	Y+2, r1	; 0x02
+ 4d8:	19 82       	std	Y+1, r1	; 0x01
+ 4da:	05 c0       	rjmp	.+10     	; 0x4e6 <Lcd_Data+0xaa>
+ 4dc:	89 81       	ldd	r24, Y+1	; 0x01
+ 4de:	9a 81       	ldd	r25, Y+2	; 0x02
+ 4e0:	01 96       	adiw	r24, 0x01	; 1
+ 4e2:	9a 83       	std	Y+2, r25	; 0x02
+ 4e4:	89 83       	std	Y+1, r24	; 0x01
+ 4e6:	89 81       	ldd	r24, Y+1	; 0x01
+ 4e8:	9a 81       	ldd	r25, Y+2	; 0x02
+ 4ea:	88 37       	cpi	r24, 0x78	; 120
+ 4ec:	91 05       	cpc	r25, r1
+ 4ee:	b0 f3       	brcs	.-20     	; 0x4dc <Lcd_Data+0xa0>
+
+	return;
+}
+ 4f0:	0f 90       	pop	r0
+ 4f2:	0f 90       	pop	r0
+ 4f4:	cf 91       	pop	r28
+ 4f6:	df 91       	pop	r29
+ 4f8:	1f 91       	pop	r17
+ 4fa:	08 95       	ret
+
+000004fc <Lcd_Print>:
+
+	return;
+}
+
+void Lcd_Print(const char * ucString)	// 들어온 문자열을 수정하지않기위해서 const를 붙인다
+{
+ 4fc:	cf 93       	push	r28
+ 4fe:	df 93       	push	r29
+ 500:	ec 01       	movw	r28, r24
+ 502:	03 c0       	rjmp	.+6      	; 0x50a <Lcd_Print+0xe>
+	while( 0 != *ucString )
+	{
+		Lcd_Data(*ucString);
+ 504:	0e 94 1e 02 	call	0x43c	; 0x43c <Lcd_Data>
+		++ucString;
+ 508:	21 96       	adiw	r28, 0x01	; 1
+	return;
+}
+
+void Lcd_Print(const char * ucString)	// 들어온 문자열을 수정하지않기위해서 const를 붙인다
+{
+	while( 0 != *ucString )
+ 50a:	88 81       	ld	r24, Y
+ 50c:	88 23       	and	r24, r24
+ 50e:	d1 f7       	brne	.-12     	; 0x504 <Lcd_Print+0x8>
+		Lcd_Data(*ucString);
+		++ucString;
+	}
+
+	return;
+}
+ 510:	df 91       	pop	r29
+ 512:	cf 91       	pop	r28
+ 514:	08 95       	ret
+
+00000516 <Lcd_CGRAM_Data>:
+
+	return;
+}
+
+void Lcd_CGRAM_Data(unsigned char ucData)
+{
+ 516:	df 93       	push	r29
+ 518:	cf 93       	push	r28
+ 51a:	0f 92       	push	r0
+ 51c:	0f 92       	push	r0
+ 51e:	cd b7       	in	r28, 0x3d	; 61
+ 520:	de b7       	in	r29, 0x3e	; 62
+	volatile unsigned int uiCnt;
+	
+	LCD_BUS = ucData;
+ 522:	88 b9       	out	0x08, r24	; 8
+
+	LCD_CTL = (1<<LCD_PIN_RS)|(0<<LCD_PIN_RW)|(0<<LCD_PIN_EN);		// datasheet timing diagram의 맨 앞
+ 524:	81 e0       	ldi	r24, 0x01	; 1
+ 526:	84 bb       	out	0x14, r24	; 20
+	DELAY(DNUM1);													// (최소 40ns 필요)LCD가 제대로 동작하기위한 지연시간
+ 528:	1a 82       	std	Y+2, r1	; 0x02
+ 52a:	19 82       	std	Y+1, r1	; 0x01
+ 52c:	05 c0       	rjmp	.+10     	; 0x538 <Lcd_CGRAM_Data+0x22>
+ 52e:	89 81       	ldd	r24, Y+1	; 0x01
+ 530:	9a 81       	ldd	r25, Y+2	; 0x02
+ 532:	01 96       	adiw	r24, 0x01	; 1
+ 534:	9a 83       	std	Y+2, r25	; 0x02
+ 536:	89 83       	std	Y+1, r24	; 0x01
+ 538:	89 81       	ldd	r24, Y+1	; 0x01
+ 53a:	9a 81       	ldd	r25, Y+2	; 0x02
+ 53c:	88 37       	cpi	r24, 0x78	; 120
+ 53e:	91 05       	cpc	r25, r1
+ 540:	b0 f3       	brcs	.-20     	; 0x52e <Lcd_CGRAM_Data+0x18>
+
+	LCD_CTL = (1<<LCD_PIN_RS)|(0<<LCD_PIN_RW)|(1<<LCD_PIN_EN);		// EN 활설화
+ 542:	85 e0       	ldi	r24, 0x05	; 5
+ 544:	84 bb       	out	0x14, r24	; 20
+	DELAY(DNUM2);													// (최소 150ns 필요)LCD가 제대로 동작하기위한 지연시간	
+ 546:	1a 82       	std	Y+2, r1	; 0x02
+ 548:	19 82       	std	Y+1, r1	; 0x01
+ 54a:	05 c0       	rjmp	.+10     	; 0x556 <Lcd_CGRAM_Data+0x40>
+ 54c:	89 81       	ldd	r24, Y+1	; 0x01
+ 54e:	9a 81       	ldd	r25, Y+2	; 0x02
+ 550:	01 96       	adiw	r24, 0x01	; 1
+ 552:	9a 83       	std	Y+2, r25	; 0x02
+ 554:	89 83       	std	Y+1, r24	; 0x01
+ 556:	89 81       	ldd	r24, Y+1	; 0x01
+ 558:	9a 81       	ldd	r25, Y+2	; 0x02
+ 55a:	80 5e       	subi	r24, 0xE0	; 224
+ 55c:	91 40       	sbci	r25, 0x01	; 1
+ 55e:	b0 f3       	brcs	.-20     	; 0x54c <Lcd_CGRAM_Data+0x36>
+
+	LCD_CTL = (1<<LCD_PIN_RS)|(0<<LCD_PIN_RW)|(0<<LCD_PIN_EN);		// datasheet timing diagram의 맨 앞
+ 560:	81 e0       	ldi	r24, 0x01	; 1
+ 562:	84 bb       	out	0x14, r24	; 20
+	DELAY(DNUM3);													// (최소 40ns 필요)LCD가 제대로 동작하기위한 지연시간
+ 564:	1a 82       	std	Y+2, r1	; 0x02
+ 566:	19 82       	std	Y+1, r1	; 0x01
+ 568:	05 c0       	rjmp	.+10     	; 0x574 <Lcd_CGRAM_Data+0x5e>
+ 56a:	89 81       	ldd	r24, Y+1	; 0x01
+ 56c:	9a 81       	ldd	r25, Y+2	; 0x02
+ 56e:	01 96       	adiw	r24, 0x01	; 1
+ 570:	9a 83       	std	Y+2, r25	; 0x02
+ 572:	89 83       	std	Y+1, r24	; 0x01
+ 574:	89 81       	ldd	r24, Y+1	; 0x01
+ 576:	9a 81       	ldd	r25, Y+2	; 0x02
+ 578:	88 37       	cpi	r24, 0x78	; 120
+ 57a:	91 05       	cpc	r25, r1
+ 57c:	b0 f3       	brcs	.-20     	; 0x56a <Lcd_CGRAM_Data+0x54>
+
+	return;
+}
+ 57e:	0f 90       	pop	r0
+ 580:	0f 90       	pop	r0
+ 582:	cf 91       	pop	r28
+ 584:	df 91       	pop	r29
+ 586:	08 95       	ret
+
+00000588 <Lcd_CGRAM_Set>:
+
+void Lcd_CGRAM_Set(unsigned char ucAddr, const unsigned char * ucData)
+{
+ 588:	0f 93       	push	r16
+ 58a:	1f 93       	push	r17
+ 58c:	cf 93       	push	r28
+ 58e:	df 93       	push	r29
+ 590:	8b 01       	movw	r16, r22
+	unsigned int uiCnt = 0;
+
+	Lcd_Inst( 0x40 | (ucAddr<<3) );
+ 592:	88 0f       	add	r24, r24
+ 594:	88 0f       	add	r24, r24
+ 596:	88 0f       	add	r24, r24
+ 598:	80 64       	ori	r24, 0x40	; 64
+ 59a:	0e 94 a3 01 	call	0x346	; 0x346 <Lcd_Inst>
+ 59e:	c0 e0       	ldi	r28, 0x00	; 0
+ 5a0:	d0 e0       	ldi	r29, 0x00	; 0
+
+	for( uiCnt = 0; uiCnt < 8; uiCnt++)
+	{
+		Lcd_CGRAM_Data(*ucData);
+ 5a2:	f8 01       	movw	r30, r16
+ 5a4:	81 91       	ld	r24, Z+
+ 5a6:	8f 01       	movw	r16, r30
+ 5a8:	0e 94 8b 02 	call	0x516	; 0x516 <Lcd_CGRAM_Data>
+{
+	unsigned int uiCnt = 0;
+
+	Lcd_Inst( 0x40 | (ucAddr<<3) );
+
+	for( uiCnt = 0; uiCnt < 8; uiCnt++)
+ 5ac:	21 96       	adiw	r28, 0x01	; 1
+ 5ae:	c8 30       	cpi	r28, 0x08	; 8
+ 5b0:	d1 05       	cpc	r29, r1
+ 5b2:	b9 f7       	brne	.-18     	; 0x5a2 <Lcd_CGRAM_Set+0x1a>
+		Lcd_CGRAM_Data(*ucData);
+		ucData++;
+	}
+	
+	return;
+}
+ 5b4:	df 91       	pop	r29
+ 5b6:	cf 91       	pop	r28
+ 5b8:	1f 91       	pop	r17
+ 5ba:	0f 91       	pop	r16
+ 5bc:	08 95       	ret
+
+000005be <Lcd_CGRAM_Init>:
+	
+	return;
+}
+
+void Lcd_CGRAM_Init(void)
+{	
+ 5be:	df 93       	push	r29
+ 5c0:	cf 93       	push	r28
+ 5c2:	cd b7       	in	r28, 0x3d	; 61
+ 5c4:	de b7       	in	r29, 0x3e	; 62
+ 5c6:	68 97       	sbiw	r28, 0x18	; 24
+ 5c8:	0f b6       	in	r0, 0x3f	; 63
+ 5ca:	f8 94       	cli
+ 5cc:	de bf       	out	0x3e, r29	; 62
+ 5ce:	0f be       	out	0x3f, r0	; 63
+ 5d0:	cd bf       	out	0x3d, r28	; 61
+	unsigned char Nam[8] 	= {0x12, 0x12, 0x13, 0x1E, 0x02, 0x1F, 0x11, 0x1F};
+ 5d2:	de 01       	movw	r26, r28
+ 5d4:	11 96       	adiw	r26, 0x01	; 1
+ 5d6:	e7 e1       	ldi	r30, 0x17	; 23
+ 5d8:	f2 e0       	ldi	r31, 0x02	; 2
+ 5da:	88 e0       	ldi	r24, 0x08	; 8
+ 5dc:	01 90       	ld	r0, Z+
+ 5de:	0d 92       	st	X+, r0
+ 5e0:	81 50       	subi	r24, 0x01	; 1
+ 5e2:	e1 f7       	brne	.-8      	; 0x5dc <Lcd_CGRAM_Init+0x1e>
+	unsigned char Su[8] 	= {0x04, 0x04, 0x0A, 0x11, 0x00, 0x1F, 0x04, 0x04};
+ 5e4:	de 01       	movw	r26, r28
+ 5e6:	19 96       	adiw	r26, 0x09	; 9
+ 5e8:	ef e0       	ldi	r30, 0x0F	; 15
+ 5ea:	f2 e0       	ldi	r31, 0x02	; 2
+ 5ec:	88 e0       	ldi	r24, 0x08	; 8
+ 5ee:	01 90       	ld	r0, Z+
+ 5f0:	0d 92       	st	X+, r0
+ 5f2:	81 50       	subi	r24, 0x01	; 1
+ 5f4:	e1 f7       	brne	.-8      	; 0x5ee <Lcd_CGRAM_Init+0x30>
+	unsigned char Jin[8] 	= {0x1D, 0x09, 0x15, 0x15, 0x01, 0x10, 0x10, 0x1F};
+ 5f6:	de 01       	movw	r26, r28
+ 5f8:	51 96       	adiw	r26, 0x11	; 17
+ 5fa:	e7 e0       	ldi	r30, 0x07	; 7
+ 5fc:	f2 e0       	ldi	r31, 0x02	; 2
+ 5fe:	88 e0       	ldi	r24, 0x08	; 8
+ 600:	01 90       	ld	r0, Z+
+ 602:	0d 92       	st	X+, r0
+ 604:	81 50       	subi	r24, 0x01	; 1
+ 606:	e1 f7       	brne	.-8      	; 0x600 <Lcd_CGRAM_Init+0x42>
+	
+	Lcd_CGRAM_Set(0, Nam);		
+ 608:	be 01       	movw	r22, r28
+ 60a:	6f 5f       	subi	r22, 0xFF	; 255
+ 60c:	7f 4f       	sbci	r23, 0xFF	; 255
+ 60e:	0e 94 c4 02 	call	0x588	; 0x588 <Lcd_CGRAM_Set>
+	Lcd_CGRAM_Set(1, Su);
+ 612:	81 e0       	ldi	r24, 0x01	; 1
+ 614:	be 01       	movw	r22, r28
+ 616:	67 5f       	subi	r22, 0xF7	; 247
+ 618:	7f 4f       	sbci	r23, 0xFF	; 255
+ 61a:	0e 94 c4 02 	call	0x588	; 0x588 <Lcd_CGRAM_Set>
+	Lcd_CGRAM_Set(2, Jin);
+ 61e:	82 e0       	ldi	r24, 0x02	; 2
+ 620:	be 01       	movw	r22, r28
+ 622:	6f 5e       	subi	r22, 0xEF	; 239
+ 624:	7f 4f       	sbci	r23, 0xFF	; 255
+ 626:	0e 94 c4 02 	call	0x588	; 0x588 <Lcd_CGRAM_Set>
+
+	Lcd_SetAddr(uiCharCnt);	
+ 62a:	80 91 25 02 	lds	r24, 0x0225
+ 62e:	0e 94 0d 02 	call	0x41a	; 0x41a <Lcd_SetAddr>
+
+	return;
+}
+ 632:	68 96       	adiw	r28, 0x18	; 24
+ 634:	0f b6       	in	r0, 0x3f	; 63
+ 636:	f8 94       	cli
+ 638:	de bf       	out	0x3e, r29	; 62
+ 63a:	0f be       	out	0x3f, r0	; 63
+ 63c:	cd bf       	out	0x3d, r28	; 61
+ 63e:	cf 91       	pop	r28
+ 640:	df 91       	pop	r29
+ 642:	08 95       	ret
+
+00000644 <__udivmodhi4>:
+ 644:	aa 1b       	sub	r26, r26
+ 646:	bb 1b       	sub	r27, r27
+ 648:	51 e1       	ldi	r21, 0x11	; 17
+ 64a:	07 c0       	rjmp	.+14     	; 0x65a <__udivmodhi4_ep>
+
+0000064c <__udivmodhi4_loop>:
+ 64c:	aa 1f       	adc	r26, r26
+ 64e:	bb 1f       	adc	r27, r27
+ 650:	a6 17       	cp	r26, r22
+ 652:	b7 07       	cpc	r27, r23
+ 654:	10 f0       	brcs	.+4      	; 0x65a <__udivmodhi4_ep>
+ 656:	a6 1b       	sub	r26, r22
+ 658:	b7 0b       	sbc	r27, r23
+
+0000065a <__udivmodhi4_ep>:
+ 65a:	88 1f       	adc	r24, r24
+ 65c:	99 1f       	adc	r25, r25
+ 65e:	5a 95       	dec	r21
+ 660:	a9 f7       	brne	.-22     	; 0x64c <__udivmodhi4_loop>
+ 662:	80 95       	com	r24
+ 664:	90 95       	com	r25
+ 666:	bc 01       	movw	r22, r24
+ 668:	cd 01       	movw	r24, r26
+ 66a:	08 95       	ret
+
+0000066c <_exit>:
+ 66c:	f8 94       	cli
+
+0000066e <__stop_program>:
+ 66e:	ff cf       	rjmp	.-2      	; 0x66e <__stop_program>

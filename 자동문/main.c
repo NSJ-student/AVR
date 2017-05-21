@@ -1,0 +1,28 @@
+#include <avr/io.h>
+#include <avr/interrupt.h>
+#include <util/delay.h>
+#include "usart.h"
+#include "func.h"
+#include "adc.h"
+
+char Move[9] = { 0xFF, 0xFF, 0x01, 0x05, 0x03, 0x1E, 0xFF, 0x03, 
+				 	(unsigned char)(~(0x01 + 0x05 + 0x03 + 0x1E  +0xff  +0x03)) };
+char Speed[9] = { 0xFF, 0xFF, 0x01, 0x05, 0x03, 0x20, 0xFF, 0x02, 
+				 	(unsigned char)(~(0x01 + 0x05 + 0x03 + 0x20  +0xFF  +0x02)) };
+
+int main(void)
+{
+	int open = 0;
+
+	Usart1_Init();	// 모터 명령어 전송
+	ADC_init();		// 아날로그 비교기
+
+	SREG |= 0x80;
+
+	while(1)
+	{
+		open = ADC_Compare(open);
+	}
+
+	return 0;
+}

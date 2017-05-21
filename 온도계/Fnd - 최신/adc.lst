@@ -1,0 +1,163 @@
+   1               		.file	"adc.c"
+   2               	__SREG__ = 0x3f
+   3               	__SP_H__ = 0x3e
+   4               	__SP_L__ = 0x3d
+   5               	__CCP__  = 0x34
+   6               	__tmp_reg__ = 0
+   7               	__zero_reg__ = 1
+  15               	.Ltext0:
+  16               	.global	ADC_init
+  18               	ADC_init:
+  19               	.LFB11:
+  20               	.LM1:
+  21               	/* prologue: function */
+  22               	/* frame size = 0 */
+  23               	.LM2:
+  24 0000 8EEF      		ldi r24,lo8(-2)
+  25 0002 80BB      		out 48-32,r24
+  26               	.LM3:
+  27 0004 EAE7      		ldi r30,lo8(122)
+  28 0006 F0E0      		ldi r31,hi8(122)
+  29 0008 80EA      		ldi r24,lo8(-96)
+  30 000a 8083      		st Z,r24
+  31               	.LM4:
+  32 000c 1092 7B00 		sts 123,__zero_reg__
+  33               	.LM5:
+  34 0010 80E4      		ldi r24,lo8(64)
+  35 0012 8093 7C00 		sts 124,r24
+  36               	.LBB18:
+  37               	.LBB19:
+  38               	.LBB20:
+  39               	.LBB21:
+  40               	.LM6:
+  41 0016 80EA      		ldi r24,lo8(4000)
+  42 0018 9FE0      		ldi r25,hi8(4000)
+  43               	.LVL0:
+  44               	/* #APP */
+  45               	 ;  105 "c:/winavr-20100110/lib/gcc/../../avr/include/util/delay_basic.h" 1
+  46 001a 0197      		1: sbiw r24,1
+  47 001c 01F4      		brne 1b
+  48               	 ;  0 "" 2
+  49               	/* #NOAPP */
+  50               	.LBE21:
+  51               	.LBE20:
+  52               	.LBE19:
+  53               	.LBE18:
+  54               	.LM7:
+  55 001e 8081      		ld r24,Z
+  56               	.LVL1:
+  57 0020 8064      		ori r24,lo8(64)
+  58 0022 8083      		st Z,r24
+  59               	/* epilogue start */
+  60               	.LM8:
+  61 0024 0895      		ret
+  62               	.LFE11:
+  64               	.global	AC_init
+  66               	AC_init:
+  67               	.LFB12:
+  68               	.LM9:
+  69               	/* prologue: function */
+  70               	/* frame size = 0 */
+  71               	.LM10:
+  72 0026 80E4      		ldi r24,lo8(64)
+  73 0028 80BF      		out 80-32,r24
+  74               	.LM11:
+  75 002a 1092 7A00 		sts 122,__zero_reg__
+  76               	.LM12:
+  77 002e 8093 7B00 		sts 123,r24
+  78               	.LM13:
+  79 0032 81E0      		ldi r24,lo8(1)
+  80 0034 8093 7C00 		sts 124,r24
+  81               	/* epilogue start */
+  82               	.LM14:
+  83 0038 0895      		ret
+  84               	.LFE12:
+  86               	.global	ADC_Start
+  88               	ADC_Start:
+  89               	.LFB13:
+  90               	.LM15:
+  91               	/* prologue: function */
+  92               	/* frame size = 0 */
+  93               	.LM16:
+  94               	/* #APP */
+  95               	 ;  29 "adc.c" 1
+  96 003a F894      		cli
+  97               	 ;  0 "" 2
+  98               	.LM17:
+  99               	/* #NOAPP */
+ 100 003c EAE7      		ldi r30,lo8(122)
+ 101 003e F0E0      		ldi r31,hi8(122)
+ 102 0040 88EA      		ldi r24,lo8(-88)
+ 103 0042 8083      		st Z,r24
+ 104               	.LBB22:
+ 105               	.LBB23:
+ 106               	.LBB24:
+ 107               	.LBB25:
+ 108               	.LM18:
+ 109 0044 80EA      		ldi r24,lo8(4000)
+ 110 0046 9FE0      		ldi r25,hi8(4000)
+ 111               	.LVL2:
+ 112               	/* #APP */
+ 113               	 ;  105 "c:/winavr-20100110/lib/gcc/../../avr/include/util/delay_basic.h" 1
+ 114 0048 0197      		1: sbiw r24,1
+ 115 004a 01F4      		brne 1b
+ 116               	 ;  0 "" 2
+ 117               	/* #NOAPP */
+ 118               	.LBE25:
+ 119               	.LBE24:
+ 120               	.LBE23:
+ 121               	.LBE22:
+ 122               	.LM19:
+ 123 004c 8081      		ld r24,Z
+ 124               	.LVL3:
+ 125 004e 8064      		ori r24,lo8(64)
+ 126 0050 8083      		st Z,r24
+ 127               	.LM20:
+ 128               	/* #APP */
+ 129               	 ;  35 "adc.c" 1
+ 130 0052 7894      		sei
+ 131               	 ;  0 "" 2
+ 132               	/* epilogue start */
+ 133               	.LM21:
+ 134               	/* #NOAPP */
+ 135 0054 0895      		ret
+ 136               	.LFE13:
+ 138               	.global	ADC_Stop
+ 140               	ADC_Stop:
+ 141               	.LFB14:
+ 142               	.LM22:
+ 143               	/* prologue: function */
+ 144               	/* frame size = 0 */
+ 145               	.LM23:
+ 146               	/* #APP */
+ 147               	 ;  40 "adc.c" 1
+ 148 0056 F894      		cli
+ 149               	 ;  0 "" 2
+ 150               	.LM24:
+ 151               	/* #NOAPP */
+ 152 0058 1092 7A00 		sts 122,__zero_reg__
+ 153               	.LM25:
+ 154               	/* #APP */
+ 155               	 ;  44 "adc.c" 1
+ 156 005c 7894      		sei
+ 157               	 ;  0 "" 2
+ 158               	/* epilogue start */
+ 159               	.LM26:
+ 160               	/* #NOAPP */
+ 161 005e 0895      		ret
+ 162               	.LFE14:
+ 212               	.Letext0:
+DEFINED SYMBOLS
+                            *ABS*:00000000 adc.c
+C:\Users\it\AppData\Local\Temp/ccbCPtOg.s:2      *ABS*:0000003f __SREG__
+C:\Users\it\AppData\Local\Temp/ccbCPtOg.s:3      *ABS*:0000003e __SP_H__
+C:\Users\it\AppData\Local\Temp/ccbCPtOg.s:4      *ABS*:0000003d __SP_L__
+C:\Users\it\AppData\Local\Temp/ccbCPtOg.s:5      *ABS*:00000034 __CCP__
+C:\Users\it\AppData\Local\Temp/ccbCPtOg.s:6      *ABS*:00000000 __tmp_reg__
+C:\Users\it\AppData\Local\Temp/ccbCPtOg.s:7      *ABS*:00000001 __zero_reg__
+C:\Users\it\AppData\Local\Temp/ccbCPtOg.s:18     .text:00000000 ADC_init
+C:\Users\it\AppData\Local\Temp/ccbCPtOg.s:66     .text:00000026 AC_init
+C:\Users\it\AppData\Local\Temp/ccbCPtOg.s:88     .text:0000003a ADC_Start
+C:\Users\it\AppData\Local\Temp/ccbCPtOg.s:140    .text:00000056 ADC_Stop
+
+NO UNDEFINED SYMBOLS

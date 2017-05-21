@@ -1,0 +1,9 @@
+C:\Users\it\Desktop\avr\comm_temp\Temperature\Temperature\bin\Debug\Temperature.exe.config
+C:\Users\it\Desktop\avr\comm_temp\Temperature\Temperature\bin\Debug\Temperature.exe
+C:\Users\it\Desktop\avr\comm_temp\Temperature\Temperature\bin\Debug\Temperature.pdb
+C:\Users\it\Desktop\avr\comm_temp\Temperature\Temperature\obj\Debug\Temperature.csprojResolveAssemblyReference.cache
+C:\Users\it\Desktop\avr\comm_temp\Temperature\Temperature\obj\Debug\Temperature.Form1.resources
+C:\Users\it\Desktop\avr\comm_temp\Temperature\Temperature\obj\Debug\Temperature.Properties.Resources.resources
+C:\Users\it\Desktop\avr\comm_temp\Temperature\Temperature\obj\Debug\Temperature.csproj.GenerateResource.Cache
+C:\Users\it\Desktop\avr\comm_temp\Temperature\Temperature\obj\Debug\Temperature.exe
+C:\Users\it\Desktop\avr\comm_temp\Temperature\Temperature\obj\Debug\Temperature.pdb

@@ -1,0 +1,202 @@
+   1               		.file	"usart.c"
+   2               	__SREG__ = 0x3f
+   3               	__SP_H__ = 0x3e
+   4               	__SP_L__ = 0x3d
+   5               	__CCP__  = 0x34
+   6               	__tmp_reg__ = 0
+   7               	__zero_reg__ = 1
+  15               	.Ltext0:
+  16               	.global	Usart0_Init
+  18               	Usart0_Init:
+  19               	.LFB11:
+  20               	.LM1:
+  21               	/* prologue: function */
+  22               	/* frame size = 0 */
+  23               	.LM2:
+  24 0000 1092 C500 		sts 197,__zero_reg__
+  25               	.LM3:
+  26 0004 87E6      		ldi r24,lo8(103)
+  27 0006 8093 C400 		sts 196,r24
+  28               	.LM4:
+  29 000a 1092 C000 		sts 192,__zero_reg__
+  30               	.LM5:
+  31 000e 88E9      		ldi r24,lo8(-104)
+  32 0010 8093 C100 		sts 193,r24
+  33               	.LM6:
+  34 0014 86E0      		ldi r24,lo8(6)
+  35 0016 8093 C200 		sts 194,r24
+  36               	/* epilogue start */
+  37               	.LM7:
+  38 001a 0895      		ret
+  39               	.LFE11:
+  41               	.global	Usart0_Init2
+  43               	Usart0_Init2:
+  44               	.LFB12:
+  45               	.LM8:
+  46               	/* prologue: function */
+  47               	/* frame size = 0 */
+  48               	.LM9:
+  49 001c 1092 C500 		sts 197,__zero_reg__
+  50               	.LM10:
+  51 0020 87E6      		ldi r24,lo8(103)
+  52 0022 8093 C400 		sts 196,r24
+  53               	.LM11:
+  54 0026 1092 C000 		sts 192,__zero_reg__
+  55               	.LM12:
+  56 002a 88E0      		ldi r24,lo8(8)
+  57 002c 8093 C100 		sts 193,r24
+  58               	.LM13:
+  59 0030 86E0      		ldi r24,lo8(6)
+  60 0032 8093 C200 		sts 194,r24
+  61               	/* epilogue start */
+  62               	.LM14:
+  63 0036 0895      		ret
+  64               	.LFE12:
+  66               	.global	Usart1_Init
+  68               	Usart1_Init:
+  69               	.LFB13:
+  70               	.LM15:
+  71               	/* prologue: function */
+  72               	/* frame size = 0 */
+  73               	.LM16:
+  74 0038 1092 CD00 		sts 205,__zero_reg__
+  75               	.LM17:
+  76 003c 1092 CC00 		sts 204,__zero_reg__
+  77               	.LM18:
+  78 0040 1092 C800 		sts 200,__zero_reg__
+  79               	.LM19:
+  80 0044 88E1      		ldi r24,lo8(24)
+  81 0046 8093 C900 		sts 201,r24
+  82               	.LM20:
+  83 004a 86E0      		ldi r24,lo8(6)
+  84 004c 8093 CA00 		sts 202,r24
+  85               	/* epilogue start */
+  86               	.LM21:
+  87 0050 0895      		ret
+  88               	.LFE13:
+  90               	.global	USART0_Tx
+  92               	USART0_Tx:
+  93               	.LFB14:
+  94               	.LM22:
+  95               	.LVL0:
+  96               	/* prologue: function */
+  97               	/* frame size = 0 */
+  98 0052 982F      		mov r25,r24
+  99               	.LVL1:
+ 100               	.L8:
+ 101               	.LM23:
+ 102 0054 8091 C000 		lds r24,192
+ 103 0058 85FF      		sbrs r24,5
+ 104 005a 00C0      		rjmp .L8
+ 105               	.LM24:
+ 106 005c 9093 C600 		sts 198,r25
+ 107               	/* epilogue start */
+ 108               	.LM25:
+ 109 0060 0895      		ret
+ 110               	.LFE14:
+ 112               	.global	USART1_Tx
+ 114               	USART1_Tx:
+ 115               	.LFB15:
+ 116               	.LM26:
+ 117               	.LVL2:
+ 118               	/* prologue: function */
+ 119               	/* frame size = 0 */
+ 120 0062 982F      		mov r25,r24
+ 121               	.LVL3:
+ 122               	.L12:
+ 123               	.LM27:
+ 124 0064 8091 C800 		lds r24,200
+ 125 0068 85FF      		sbrs r24,5
+ 126 006a 00C0      		rjmp .L12
+ 127               	.LM28:
+ 128 006c 9093 CE00 		sts 206,r25
+ 129               	/* epilogue start */
+ 130               	.LM29:
+ 131 0070 0895      		ret
+ 132               	.LFE15:
+ 134               	.global	Usart_Print
+ 136               	Usart_Print:
+ 137               	.LFB16:
+ 138               	.LM30:
+ 139               	.LVL4:
+ 140               	/* prologue: function */
+ 141               	/* frame size = 0 */
+ 142 0072 FC01      		movw r30,r24
+ 143 0074 00C0      		rjmp .L16
+ 144               	.LVL5:
+ 145               	.L19:
+ 146               	.LBB4:
+ 147               	.LBB5:
+ 148               	.LM31:
+ 149 0076 8091 C000 		lds r24,192
+ 150 007a 85FF      		sbrs r24,5
+ 151 007c 00C0      		rjmp .L19
+ 152               	.LM32:
+ 153 007e 9093 C600 		sts 198,r25
+ 154               	.LBE5:
+ 155               	.LBE4:
+ 156               	.LM33:
+ 157 0082 3196      		adiw r30,1
+ 158               	.LVL6:
+ 159               	.L16:
+ 160               	.LM34:
+ 161 0084 9081      		ld r25,Z
+ 162 0086 9923      		tst r25
+ 163 0088 01F4      		brne .L19
+ 164               	/* epilogue start */
+ 165               	.LM35:
+ 166 008a 0895      		ret
+ 167               	.LFE16:
+ 169               	.global	USART0_Rx
+ 171               	USART0_Rx:
+ 172               	.LFB17:
+ 173               	.LM36:
+ 174               	/* prologue: function */
+ 175               	/* frame size = 0 */
+ 176               	.L22:
+ 177               	.LM37:
+ 178 008c 8091 C000 		lds r24,192
+ 179 0090 87FF      		sbrs r24,7
+ 180 0092 00C0      		rjmp .L22
+ 181               	.LM38:
+ 182 0094 8091 C600 		lds r24,198
+ 183               	/* epilogue start */
+ 184               	.LM39:
+ 185 0098 0895      		ret
+ 186               	.LFE17:
+ 188               	.global	USART1_Rx
+ 190               	USART1_Rx:
+ 191               	.LFB18:
+ 192               	.LM40:
+ 193               	/* prologue: function */
+ 194               	/* frame size = 0 */
+ 195               	.L26:
+ 196               	.LM41:
+ 197 009a 8091 C800 		lds r24,200
+ 198 009e 87FF      		sbrs r24,7
+ 199 00a0 00C0      		rjmp .L26
+ 200               	.LM42:
+ 201 00a2 8091 CE00 		lds r24,206
+ 202               	/* epilogue start */
+ 203               	.LM43:
+ 204 00a6 0895      		ret
+ 205               	.LFE18:
+ 287               	.Letext0:
+DEFINED SYMBOLS
+                            *ABS*:00000000 usart.c
+C:\Users\it\AppData\Local\Temp/cc6t2cMj.s:2      *ABS*:0000003f __SREG__
+C:\Users\it\AppData\Local\Temp/cc6t2cMj.s:3      *ABS*:0000003e __SP_H__
+C:\Users\it\AppData\Local\Temp/cc6t2cMj.s:4      *ABS*:0000003d __SP_L__
+C:\Users\it\AppData\Local\Temp/cc6t2cMj.s:5      *ABS*:00000034 __CCP__
+C:\Users\it\AppData\Local\Temp/cc6t2cMj.s:6      *ABS*:00000000 __tmp_reg__
+C:\Users\it\AppData\Local\Temp/cc6t2cMj.s:7      *ABS*:00000001 __zero_reg__
+C:\Users\it\AppData\Local\Temp/cc6t2cMj.s:18     .text:00000000 Usart0_Init
+C:\Users\it\AppData\Local\Temp/cc6t2cMj.s:43     .text:0000001c Usart0_Init2
+C:\Users\it\AppData\Local\Temp/cc6t2cMj.s:68     .text:00000038 Usart1_Init
+C:\Users\it\AppData\Local\Temp/cc6t2cMj.s:92     .text:00000052 USART0_Tx
+C:\Users\it\AppData\Local\Temp/cc6t2cMj.s:114    .text:00000062 USART1_Tx
+C:\Users\it\AppData\Local\Temp/cc6t2cMj.s:136    .text:00000072 Usart_Print
+C:\Users\it\AppData\Local\Temp/cc6t2cMj.s:171    .text:0000008c USART0_Rx
+C:\Users\it\AppData\Local\Temp/cc6t2cMj.s:190    .text:0000009a USART1_Rx
+
+NO UNDEFINED SYMBOLS
